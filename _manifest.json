@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "id": "local.dps.ignore-user",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "忽略指定用户",
   "description": "按 QQ 号忽略指定用户在群聊/私聊里的发言：被忽略的消息不会进入麦麦的思考与回复，可在配置里限定生效的群。",
   "author": {

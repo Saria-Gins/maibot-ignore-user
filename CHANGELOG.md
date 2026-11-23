@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- 仓库不再携带 `config.toml`，改由 Runner 依据 `config_model` 自动生成；`config.toml` 已加入 `.gitignore`
+
 ## 1.0.0 — 首个版本
 
 ### 功能
