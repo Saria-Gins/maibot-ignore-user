@@ -1,0 +1,16 @@
+[plugin]
+enabled = true
+config_version = "1.0.0"
+
+[filter]
+# 生效范围：group 仅群聊、private 仅私聊、all 两者都生效
+scope = "group"
+
+# 要忽略的 QQ 号；留空表示不过滤任何消息
+user_ids = ["2109872574"]
+
+# 只在指定的群里忽略；留空表示所有群都生效
+group_ids = []
+
+# 丢弃时写一条 info 日志，方便确认规则是否生效
+log_dropped = true

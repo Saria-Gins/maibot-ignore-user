@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "id": "local.dps.ignore-user",
+  "version": "1.0.0",
+  "name": "忽略指定用户",
+  "description": "按 QQ 号忽略指定用户在群聊/私聊里的发言：被忽略的消息不会进入麦麦的思考与回复，可在配置里限定生效的群。",
+  "author": {
+    "name": "YG",
+    "url": "https://github.com/Saria-Gins"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/Saria-Gins/maibot-ignore-user",
+    "homepage": "https://github.com/Saria-Gins/maibot-ignore-user",
+    "documentation": "https://github.com/Saria-Gins/maibot-ignore-user/blob/main/README.md",
+    "issues": "https://github.com/Saria-Gins/maibot-ignore-user/issues"
+  },
+  "host_application": {
+    "min_version": "1.4.4",
+    "max_version": "1.4.99"
+  },
+  "sdk": {
+    "min_version": "2.20.0",
+    "max_version": "2.99.99"
+  },
+  "plugin_type": "utility",
+  "display": {
+    "icon": {
+      "type": "lucide",
+      "value": "user-x",
+      "fallback": "user"
+    }
+  },
+  "capabilities": [],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": [
+      "zh-CN"
+    ]
+  }
+}
