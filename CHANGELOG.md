@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.0
+
+### 功能
+
+- 新增与「智能戳一戳」插件的单向联动：把忽略名单自动写入其 `[user_control] blacklist`，被忽略的人戳一戳也不会触发反应
+- 同步时先剔除上次写入的号码，保留用户手填的黑名单条目；只改 `blacklist` 一行，其余配置与注释原样保留
+
+### 细节
+
+- 联动可在 `[link]` 里关闭（`sync_poke_blacklist = false`），目标插件 ID 可自定义
+- 启动与配置热更新时各同步一次，已是目标状态则不写文件
+
 ## 1.0.1
 
 - 仓库不再携带 `config.toml`，改由 Runner 依据 `config_model` 自动生成；`config.toml` 已加入 `.gitignore`

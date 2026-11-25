@@ -121,6 +121,20 @@ async def handle_before_process(self, message):
 
 ---
 
+## 与「智能戳一戳」联动
+
+默认开启：插件启动与配置更新时，会把忽略名单单向写入「智能戳一戳」插件的 `[user_control] blacklist`，让被忽略的人戳一戳也不会得到反应。
+
+```toml
+[link]
+sync_poke_blacklist = true
+poke_plugin_id = "TAIY2020.smart_poke_plugin"
+```
+
+- 只改 `blacklist` 一行，其它配置与注释保持原样
+- 上次同步写入的号码会先剔除，不会覆盖你手填的条目
+- 每次同步后需要让戳一戳插件重新读取配置（重启麦麦或热更新其配置）
+
 ## 边界说明
 
 - **只影响麦麦的处理链**：消息在适配器层面已经收到并入库（`mai_messages` 表），但不会进入麦麦的上下文与记忆

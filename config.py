@@ -11,7 +11,7 @@ class PluginSection(PluginConfigBase):
     """插件开关与配置版本。"""
 
     enabled: bool = Field(default=True, description="是否启用本插件")
-    config_version: str = Field(default="1.0.0", description="配置模板版本号")
+    config_version: str = Field(default="1.1.0", description="配置模板版本号")
 
 
 class FilterSection(PluginConfigBase):
@@ -27,8 +27,20 @@ class FilterSection(PluginConfigBase):
     log_dropped: bool = Field(default=True, description="丢弃消息时写一条 info 日志")
 
 
+class LinkSection(PluginConfigBase):
+    """与其他插件的单向联动。"""
+
+    sync_poke_blacklist: bool = Field(
+        default=True, description="把忽略名单单向同步到「智能戳一戳」插件的黑名单"
+    )
+    poke_plugin_id: str = Field(
+        default="TAIY2020.smart_poke_plugin", description="目标插件 ID"
+    )
+
+
 class IgnoreUserConfig(PluginConfigBase):
     """配置根节点。"""
 
     plugin: PluginSection = Field(default_factory=PluginSection)
     filter: FilterSection = Field(default_factory=FilterSection)
+    link: LinkSection = Field(default_factory=LinkSection)
